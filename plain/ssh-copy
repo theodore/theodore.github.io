@@ -1,0 +1,1 @@
+sshpass -p "$PASSWORD" scp -r "$SRC" "$DEST"

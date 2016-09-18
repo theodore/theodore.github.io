@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# This is how to remove pdf password
+
+#pdftk "$1" input_pw xyz@fudan.edu.cn cat 1-endright output "$2".pdf
+#pdftk "$1" input_pw xyz@fudan.edu.cn cat 1-end output "$2".pdf
+
+
+
+# tmp
+pdftk "$1" input_pw xyz@fudan.edu.cn cat 1-end output nopass/"$1"

@@ -1,0 +1,4 @@
+shnsplit -f cuefile.cue -o flac -t '%n - %t' flacfile.flac
+cuetag.sh cuefile.cue 00.flac 01.flac ...
+
+try cue2tracks next time :)

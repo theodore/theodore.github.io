@@ -1,0 +1,11 @@
+pptpsetup --create johnson --server xxx.xxx.xxx.xxx --username xxx --password xxx --encrypt
+
+then append to /etc/ppp/peers/johnson
+refuse-pap
+refuse-eap
+refuse-chap
+refuse-mschap
+
+
+start with
+    pon johnson updetach && ip route replace default dev ppp0

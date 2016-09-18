@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# WARNING not sure if it works
+
+export LC_ALL=zh_CN.GB18030
+7z x -mcl=on "$1"
+convmv --notest -f cp936 -t utf8 *
+convmv --notest -f cp936 -t utf8 */*

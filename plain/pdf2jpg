@@ -1,0 +1,12 @@
+#!/bin/bash
+
+work() {
+    src=$1
+    dest=`echo $src | sed 's/.pdf/.jpg/'`
+    echo "Converting $src to $dest..."
+    convert -density 200x200 $src $dest
+}
+
+for i in "$@"; do
+    work $i
+done

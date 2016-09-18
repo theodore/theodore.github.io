@@ -1,0 +1,10 @@
+# fsck before shrinking
+e2fsck -f /dev/sdbxxx
+# G means GiB
+resize2fs /dev/sdbxxxx 20G
+# shrink partition
+fdisk
+# to make sure it's alligned, run again
+resize2fs /dev/sdbxxxx
+# remember to edit, since partuuid is changed
+/etc/fstab

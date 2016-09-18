@@ -1,0 +1,23 @@
+this how to is copied from the internet and not tested locally
+
+How to connect to X remotely?
+
+# method 1
+#http://unix.stackexchange.com/questions/44818/how-can-i-connect-to-a-remote-x-server-without-ssh
+
+If you want to run a X command on a remote system and and show the client on your local system the solution is rather simple:
+
+* You have to ensure that your X Server accepts connection via TCP, nowadays this is typically disabled as it is a security problem. You basically have to run your Xorg server without the -nolisten tcp option. For gdm3 you can add DisallowTCP=false to /etc/gdm3/daemon.conf under the security context. Afterwards you have to restart gdm3. Now ps axuf | grep Xorg should show your X-Server without the -nolisten tcp option.
+
+  Now your XServer should listen on port 6000, you can check with netstat
+    -anp | grep 600.
+
+* You have to allow access from your remote system to your local Xsession, this can be either done via xhost to generally allow access from a specific system, e.g. xhost +host or via supplying the magic cookie, see DISPLAY and AUTHORITY for more information.
+
+* Now you just have to specify the DISPLAY variable on your remote host, e.g: export DISPLAY=localsystem:0. Now all x clients will automatically try to use your local system. If you didn't allow TCP access (or have a firewall in between) or you didn't provide the needed authorization (e.g. wrong xhost command, did not copy the xauth cookie) your commands won't be able to connect to your system.
+
+Please be aware that the connection is not encrypted and you basically typing plaintext. If you use xhost you also allowed all clients from that specific host access to your Xserver, e.g. they can read keyboard inputs etc.
+
+# method 2
+#http://unix.stackexchange.com/questions/4845/linux-linux-remote-x-login-desktop
+use vnc, rdp, or nx.  freenx recommended

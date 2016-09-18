@@ -1,0 +1,2 @@
+usermod -l newlogin -md /new/home oldlogin
+groupmod -n new old

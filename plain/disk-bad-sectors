@@ -1,0 +1,20 @@
+# smart test
+smartctl -t long /dev/disk
+# `smartctl -a /dev/disk` seems to give the test result
+# or use badblocks
+
+# smart error logs
+smartctl -l error /dev/disk
+
+now you have <sector>
+find the partition the bad sector belongs
+let <sector> = <sector> - partition start
+# `tune2fs -l /dev/diskn` gives Block size
+let <block> = <sector> / 8 (if using 512M disk block & 4K fs block)
+
+# to get file path from block number
+debugfs
+: open /dev/diskn
+: testb <block>
+: icheck <block>
+: ncheck <inode>
