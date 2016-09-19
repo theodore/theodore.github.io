@@ -1,3 +1,7 @@
+---
+---
+
+
 # How to redirect an http request
 
 To redirect an http request, use [response code 302][302]
