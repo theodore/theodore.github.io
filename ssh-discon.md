@@ -2,4 +2,4 @@
 ---
 
 # How to disconnect a ssh session
-`<Return>~.`
+just type `<Return>~.`
