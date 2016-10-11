@@ -3,13 +3,14 @@
 
 trying to write some howtos here
 
-[http redirection](http/redirect.html)
-[typing symbols in vim](vim.html)
-[disconnecting an ssh session](ssh-discon.html)
+[http redirection](http/redirect)
 
-    <p> files in plain are old howtos, which need to be updated to html files </p>
+[typing symbols in vim](vim)
 
-    <ul>
+[disconnecting an ssh session](ssh-discon)
+
+files in plain are old howtos, which need to be updated to html files
+
 <li> <a href="plain/unzip-chinese-test.html">plain/unzip-chinese-test</a> </li>
 <li> <a href="plain/http-redirect.html">plain/http-redirect</a> </li>
 <li> <a href="plain/pdf-editing.html">plain/pdf-editing</a> </li>
@@ -32,4 +33,3 @@ trying to write some howtos here
 <li> <a href="plain/change-login.html">plain/change-login</a> </li>
 <li> <a href="plain/split-and-tag-flac.html">plain/split-and-tag-flac</a> </li>
 <li> <a href="plain/PPTP-server.html">plain/PPTP-server</a> </li>
-    </ul>
