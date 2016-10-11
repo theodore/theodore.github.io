@@ -1,20 +1,11 @@
-<!doctype html>
+---
+---
 
-<html>
-<body>
-    <p> trying to write some howtos here </p>
+trying to write some howtos here
 
-    <p>
-    <a href="http/redirect.html">http redirection</a>
-    </p>
-
-    <p>
-    <a href="vim.html">typing symbols in vim</a>
-    </p>
-
-    <p>
-    <a href="ssh-discon.html">disconnecting an ssh session</a>
-    </p>
+[http redirection](http/redirect.html)
+[typing symbols in vim](vim.html)
+[disconnecting an ssh session](ssh-discon.html)
 
     <p> files in plain are old howtos, which need to be updated to html files </p>
 
@@ -42,5 +33,3 @@
 <li> <a href="plain/split-and-tag-flac.html">plain/split-and-tag-flac</a> </li>
 <li> <a href="plain/PPTP-server.html">plain/PPTP-server</a> </li>
     </ul>
-</body>
-</html>
