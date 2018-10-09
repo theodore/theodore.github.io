@@ -1,0 +1,8 @@
+# linux efistub
+sudo efibootmgr -b 3 -B 
+sudo efibootmgr -c -d /dev/sdb -p 2 -L 'Linux EFISTUB' -l /vmlinuz-linux -u "root=PARTUUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx initrd=/intel-ucode.img initrd=/initramfs-linux.img rw quiet"
+
+
+# refind
+sudo efibootmgr -b 0 -B 
+sudo efibootmgr -c -d /dev/sdb -p 2 -L 'rEFInd Boot Manager' -l /EFI/refind/refind_x64.efi

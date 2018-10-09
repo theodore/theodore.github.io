@@ -1,0 +1,3 @@
+zzz:
+	#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=compressed.pdf output.pdf
+	gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -sOutputFile=compressed.pdf output.pdf
