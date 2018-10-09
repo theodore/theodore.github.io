@@ -1,0 +1,15 @@
+# This is a sample configuration for Arch Linux netctl / wpa_supplicant to connect to iFudan.1x network
+
+Description='iFudan'
+Interface=wlp4s0
+Connection=wireless
+Security=wpa-configsection
+IP=dhcp
+WPAConfigSection=(
+    'ssid="iFudan.1x"'
+    'key_mgmt=WPA-EAP IEEE8021X'
+    'eap=PEAP'
+    'identity="12345678901"'
+    'password="password"'
+    'proactive_key_caching=1'
+)

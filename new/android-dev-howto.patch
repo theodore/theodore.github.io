@@ -1,0 +1,33 @@
+# run the following command, then apply this patch
+# /v/var/android/tools/android create project -n Name -a MainA -k x.name -v 2.2.0 -t 1 -g -p ./path
+# this is how to build
+# ./gradlew assembleDebug -x lint
+
+diff -ur path.old/build.gradle path/build.gradle
+--- path.old/build.gradle	2017-01-22 09:40:00.623224615 +0800
++++ path/build.gradle	2017-01-22 09:41:41.328057725 +0800
+@@ -1,6 +1,6 @@
+ buildscript {
+     repositories {
+-        mavenCentral()
++        jcenter()
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:2.2.0'
+@@ -14,7 +14,6 @@
+ 
+     buildTypes {
+         release {
+-            runProguard false
+             proguardFile getDefaultProguardFile('proguard-android.txt')
+         }
+     }
+diff -ur path.old/gradle/wrapper/gradle-wrapper.properties path/gradle/wrapper/gradle-wrapper.properties
+--- path.old/gradle/wrapper/gradle-wrapper.properties	2017-01-22 09:40:00.626560105 +0800
++++ path/gradle/wrapper/gradle-wrapper.properties	2017-01-22 09:41:57.371470595 +0800
+@@ -3,4 +3,4 @@
+ distributionPath=wrapper/dists
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+-distributionUrl=http\://services.gradle.org/distributions/gradle-1.12-all.zip
++distributionUrl=http\://services.gradle.org/distributions/gradle-3.3-all.zip

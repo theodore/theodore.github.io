@@ -1,0 +1,2 @@
+# example: use ssh to establish a socks connection
+ssh -D1080 -CN -p12346 username@123.123.123.123

@@ -1,0 +1,2 @@
+You may want do disable flat volumes, in /etc/pulse/daemon.conf, set
+flat-volumes = no

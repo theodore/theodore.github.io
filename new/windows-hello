@@ -1,0 +1,9 @@
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PassportForWork
+	enabled 1
+	RequireSecurityDevice 0
+
+group policy
+Administrative Templates > System > Logon
+	Turn on convenience PIN sign-in (deprecated)
+Administrative Templates > Windows Components > Windows Hello for Business
+	Use Windows Hello for Business: enabled
