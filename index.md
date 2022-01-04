@@ -3,7 +3,7 @@
 
 source: [https://github.com/theodore/theodore.github.io](https://github.com/theodore/theodore.github.io)
 
-trying to write some howtos here
+Trying to write some howtos here.
 
 [http redirection](http/redirect)
 
@@ -11,7 +11,9 @@ trying to write some howtos here
 
 [disconnecting an ssh session](ssh-discon)
 
-[MORE FILES](find-list)
+[sshd on Windows](windows-sshd)
+
+**[MORE FILES](find-list)**
 
 files in plain are old howtos, which need to be updated to html files
 

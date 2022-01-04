@@ -1,0 +1,30 @@
+# Installation
+https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
+After installation, run in powershell:
+	Start-Service sshd
+
+	# OPTIONAL but recommended:
+	Set-Service -Name sshd -StartupType 'Automatic'
+
+	# Confirm the Firewall rule is configured. It should be created automatically by setup.
+	Get-NetFirewallRule -Name *ssh*
+
+	# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
+	# If the firewall does not exist, create one
+	New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+
+# Configuration
+%ProgramData%\ssh
+
+# Authentication
+https://github.com/PowerShell/Win32-OpenSSH/wiki/Security-protection-of-various-files-in-Win32-OpenSSH
+Use administrators_authorized_keys.
+Fix permission by
+	PS C:\>get-acl .\ssh_host_dsa_key | Set-Acl administrators_authorized_keys
+
+# Domain User
+https://github.com/PowerShell/Win32-OpenSSH/issues/1543
+https://github.com/PowerShell/Win32-OpenSSH/issues/1667
+
+# Logging
+https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities
